@@ -32,8 +32,8 @@ const limiter = rateLimit({
 app.use('/api/generate', limiter);
 
 // ─── Body Parsing ─────────────────────────────────────────
-app.use(express.json({ limit: '1mb' }));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ limit: '10mb', extended: true }));
 
 // ─── Routes ───────────────────────────────────────────────
 app.use('/api', cardRoutes);
