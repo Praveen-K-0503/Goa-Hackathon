@@ -1,0 +1,71 @@
+.wrapper {
+  display: flex; flex-direction: column; gap: 24px;
+  background: rgba(255, 255, 255, 0.90);
+  border: 1px solid rgba(2, 132, 199, 0.20);
+  border-radius: var(--radius-xl);
+  padding: 28px 24px;
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-lg);
+}
+
+.successHeader {
+  display: flex; align-items: center; gap: 16px;
+}
+
+.successIcon {
+  font-size: 36px; line-height: 1;
+  filter: drop-shadow(0 0 10px rgba(2, 132, 199, 0.4));
+}
+
+.successTitle {
+  font-family: var(--font-display); font-size: 22px; font-weight: 800;
+  color: #0f172a;
+}
+
+.successSub { font-size: 14px; color: #334155; margin-top: 2px; font-weight: 500; }
+.hash { color: #0284c7; font-weight: 700; }
+
+.imageWrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1.5px solid rgba(2, 132, 199, 0.25);
+  box-shadow: 0 4px 20px rgba(2, 132, 199, 0.12), var(--shadow-md);
+  max-width: 440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.cardImage {
+  width: 100%; display: block;
+  border-radius: var(--radius-lg);
+}
+
+.imageGlow {
+  position: absolute; inset: 0; border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(2,132,199,0.05), transparent, rgba(225,29,72,0.05));
+  pointer-events: none;
+}
+
+.actions { display: flex; flex-direction: column; gap: 10px; }
+
+.btnFull { width: 100%; justify-content: center; }
+
+.secondaryActions { display: flex; gap: 10px; }
+
+.captionPreview {
+  background: rgba(248, 250, 252, 0.90);
+  border: 1px solid rgba(148, 163, 184, 0.30);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.captionLabel {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+  color: #64748b; text-transform: uppercase; margin-bottom: 8px;
+}
+
+.captionText {
+  font-size: 13px; color: #334155; line-height: 1.6;
+  white-space: pre-line; font-weight: 500;
+}

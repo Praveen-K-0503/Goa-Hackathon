@@ -1,0 +1,160 @@
+.container { display: flex; flex-direction: column; gap: 20px; }
+
+.header { display: flex; align-items: center; gap: 14px; }
+
+.step {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #0284c7;
+  padding: 4px 10px;
+  border: 1px solid rgba(2,132,199,0.30);
+  border-radius: var(--radius-full);
+  background: rgba(2,132,199,0.08);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* ── Crew Size Selector ── */
+.crewGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.crewBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 10px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgba(148, 163, 184, 0.35);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.crewBtn:hover {
+  background: #ffffff;
+  border-color: #0284c7;
+}
+
+.crewBtnActive {
+  background: #0f172a !important;
+  border-color: #0284c7 !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.2) !important;
+}
+
+.crewTag {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.crewBtnActive .crewTag {
+  color: #00f5ff;
+}
+
+.crewLabel {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.crewBtnActive .crewLabel {
+  color: #ffffff;
+}
+
+.teamNameWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(2, 132, 199, 0.20);
+  padding: 16px;
+  border-radius: var(--radius-lg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 22px 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgba(148, 163, 184, 0.35);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  text-align: left;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.card:hover {
+  background: #ffffff;
+  border-color: rgba(2,132,199,0.40);
+  box-shadow: 0 4px 20px rgba(2,132,199,0.10);
+}
+
+.card.active {
+  border-color: #0284c7;
+  background: #ffffff;
+  box-shadow: 0 0 24px rgba(2,132,199,0.18);
+}
+
+.tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.card.active .tag { color: #0284c7; }
+
+.emoji { font-size: 32px; line-height: 1; margin: 4px 0; }
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.cardDesc {
+  font-size: 13px;
+  color: #334155;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.activeIndicator {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  border: 2px solid #0284c7;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .crewGrid { grid-template-columns: repeat(2, 1fr); }
+  .grid { grid-template-columns: 1fr; }
+  .card { flex-direction: row; align-items: center; gap: 14px; }
+  .emoji { font-size: 28px; }
+}

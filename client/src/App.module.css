@@ -1,0 +1,57 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  background: transparent;
+  overflow-x: hidden;
+}
+
+/* ── Ambient blobs (warm light tropical tones) ── */
+.blob1, .blob2, .blob3 {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+.blob1 {
+  width: 600px; height: 600px;
+  top: -200px; left: -200px;
+  background: radial-gradient(circle, rgba(2,132,199,0.12), transparent 70%);
+}
+.blob2 {
+  width: 700px; height: 700px;
+  bottom: -300px; right: -250px;
+  background: radial-gradient(circle, rgba(217,119,6,0.10), transparent 70%);
+}
+.blob3 {
+  width: 500px; height: 500px;
+  top: 40%; left: 55%;
+  background: radial-gradient(circle, rgba(225,29,72,0.08), transparent 70%);
+}
+
+/* ── Main content ── */
+.main {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Single Tab Container ── */
+.singleTabWrap {
+  padding-top: 60px;
+  min-height: 80vh;
+}
+
+/* ── Section dividers ── */
+.sectionDivider {
+  height: 1px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(2, 132, 199, 0.25) 30%,
+    rgba(217, 119, 6, 0.30) 50%,
+    rgba(225, 29, 72, 0.20) 70%,
+    transparent 100%
+  );
+}
