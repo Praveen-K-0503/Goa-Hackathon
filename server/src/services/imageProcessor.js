@@ -15,8 +15,9 @@ function circularMaskSVG(size) {
 async function generateFrameA(photoBuffer) {
   const SIZE = 1000;
 
-  // 1. Resize & smart-crop photo to square
+  // 1. Resize & smart-crop photo to square (auto-rotate according to EXIF metadata)
   const squarePhoto = await sharp(photoBuffer)
+    .rotate()
     .resize(SIZE, SIZE, { fit: 'cover', position: 'attention' })
     .toBuffer();
 
@@ -64,8 +65,9 @@ async function generateFrameB({ photoBuffer, name, role, stack, builderTitle }) 
   const PHOTO_X = 230; // (700 - 240) / 2 = 230
   const PHOTO_Y = 120; // Top of photo (Center at cx=350, cy=240, r=120)
 
-  // 1. Resize & crop photo to circle
+  // 1. Resize & crop photo to circle (auto-rotate according to EXIF metadata)
   const squarePhoto = await sharp(photoBuffer)
+    .rotate()
     .resize(PHOTO_SIZE, PHOTO_SIZE, { fit: 'cover', position: 'attention' })
     .toBuffer();
 
